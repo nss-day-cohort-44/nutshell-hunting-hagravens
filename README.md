@@ -5,3 +5,10 @@ If you want to clone our repository, see below.
 
 ![Nutshell-Erd](Nutshell-ERD.png)
 
+![Nutshell-Login-Wireframe](./Nutshell-Login-Wireframe.png)
+
+![Nutshell-Wireframe](./Nutshell-Wireframe.png)
+
+![Nutshell-Dependency1](./Nutshell-Dependency1.png)
+
+![Nutshell-Dependency2](./Nutshell-Dependency2.png)
