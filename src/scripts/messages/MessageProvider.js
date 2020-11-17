@@ -1,3 +1,10 @@
+//AUTHOR: Shawn
+//PURPOSE OF MODULE: to get messages from json
+
+
+
+
+
 const eventHub = document.querySelector(".container")
 
 let message = []
@@ -17,5 +24,5 @@ export const useMessage = () => {
 }
 
 export const sendMessage = (chat) => {
-    
+
 }
