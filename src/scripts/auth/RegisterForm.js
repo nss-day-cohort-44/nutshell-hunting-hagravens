@@ -18,7 +18,7 @@ eventHub.addEventListener("click", e => {
             .then(users => {
                 if (users.length === 0) {
                     fetch("http://localhost:8088/users", {
-                        "method": "POST",
+                        method: "POST",
                         "headers": {
                             "Content-Type": "application/json"
                         },
