@@ -11,7 +11,7 @@
 
 ## Instructions
 
-Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, articles article, friends, and chat messages.
 
 You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
 
@@ -41,7 +41,7 @@ To start you off, here's an example of what the resources in your API should loo
 { "id": 1, "userId": 1, "message": "What's up?" }
 ```
 
-### News
+### articles
 
 ```json
 {
