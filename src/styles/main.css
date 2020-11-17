@@ -20,7 +20,6 @@ h1,h2,h3,h4,h5,h6 {
 }   
 
 
-
 .dashboard, .auth{
     display: flex
 }
@@ -36,6 +35,14 @@ h1,h2,h3,h4,h5,h6 {
     margin: 5px;
     border-style: groove;
     border-color: #000000;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	width: fit-content;
+	margin: 10px;
 }
 
 .articles-tasks, .chat, .friends-events{
