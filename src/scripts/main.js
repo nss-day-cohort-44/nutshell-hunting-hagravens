@@ -16,8 +16,6 @@ if (!sessionStorage.length) {
 } else {
     Nutshell()
 }
-// const eventHub = document.querySelector(".container")
-// eventHub.addEventListener("userAuthenticated", () => Nutshell())
 
 
 // LoginForm()
