@@ -1,7 +1,7 @@
 /*      
  *      Author: Ted
  *   
- *      Purpose: List news articles, export functions to modules.
+ *      Purpose: List news articles, export functions to modules. Needs user specific.
  */
 
 import { newsArticle } from "./NewsArticle.js"
