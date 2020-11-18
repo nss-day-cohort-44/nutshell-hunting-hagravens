@@ -5,7 +5,7 @@
  */
 
 import { newsArticle } from "./NewsArticle.js"
-import { getArticles, useArticles, editArticle, deleteArticle } from "./NewsProvider.js"
+import { getArticles, useArticles, deleteArticle } from "./NewsProvider.js"
 
 const newsElement = document.querySelector(".articleCard")
 const eventHub = document.querySelector(".container")
@@ -30,26 +30,6 @@ const render = (articles) => {
     }
     newsElement.innerHTML = articlesHTML
 }
-
-eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("editArticle--")) {
-        const [prefix, articleId] = clickEvent.target.id.split("--")
-
-         /*
-            Let all other components know that the user chose
-            to edit an entry, and attach data to the message
-            so that any listeners know which entry should be
-            edited.
-        */
-       const message = new CustomEvent(articleId)
-       editArticle(message).then(
-           () => {
-               const updatedArticle = useArticles()
-               render(updatedArticle)
-           }
-       )
-    }
-})
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteArticle--")) {

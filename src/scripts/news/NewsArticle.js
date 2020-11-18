@@ -11,7 +11,6 @@ export const newsArticle = (articleObj) => {
     <p class="news__url">URL: ${articleObj.url}</p>
     <p class="news__date">Date Posted: ${new Date(articleObj.datePosted).toLocaleDateString('en-US')}</p>
     <p class="news__synopsis">Synopsis: ${articleObj.synopsis}</p>
-    <button class="news__edit" id="editArticle--${articleObj.id}">Edit Article</button>
     <input type="hidden" name="articleId" id="articleId">
     <button class="news__delete" id="deleteArticle--${articleObj.id}">Delete Article</button>
     </div>

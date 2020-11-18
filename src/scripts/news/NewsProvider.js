@@ -42,19 +42,6 @@ export const saveArticle = (article) => {
     .then(dispatchStateChangeEvent)
 }
 
-export const editArticle = article => {
-    return fetch("http://localhost:8088/articles", {
-        method: "PUT",
-        headers: {
-            "Content-type": "application/json"
-    },
-    body: JSON.stringify(article)
-
-})
-        .then(() => {
-            const updatedArticles = useArticles()
-        })}
-
 export const deleteArticle = articleId => {
     return fetch(`http://localhost:8088/articles/${articleId}`, {
         method: "DELETE"

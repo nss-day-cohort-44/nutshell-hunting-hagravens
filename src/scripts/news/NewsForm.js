@@ -59,16 +59,4 @@ eventHub.addEventListener("click", clickEvent => {
         }
         saveArticle(newsArticle)
     }
-    // else(clickEvent.target.id === "#editArticle")
-    // const title = document.querySelector("#article--Title").value
-    // const url = document.querySelector("#article--URL").value
-    // const datePosted = document.querySelector("#article--Date").value
-    // const synopsis = document.querySelector("#article--Synopsis").value        
-
-    //     const newsArticle = {
-    //         title,
-    //         url,
-    //         datePosted,
-    //         synopsis
-    //     }
-        })
+})
