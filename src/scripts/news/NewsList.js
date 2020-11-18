@@ -16,8 +16,15 @@ export const articlesList = () => {
     getArticles()
         .then(() => {
             const articlesArray = useArticles()
-            render(articlesArray)
-})
+            const userArticles = parseInt(sessionStorage.getItem("activeUser"))
+            console.log(userArticles)
+            const filteredArticles = articlesArray.filter(article => 
+                article.userId === userArticles
+            )
+            console.log(filteredArticles)
+            render(filteredArticles)
+        }
+        )
 }
 
 const render = (articles) => {
