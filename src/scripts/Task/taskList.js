@@ -10,7 +10,5 @@ getTask()
 
 const render = () => {
     letTaskHTMLRepresentations = ""
-    for (const task of taskArray){
-        
-    }
+    for (const task of taskArray)
 }
