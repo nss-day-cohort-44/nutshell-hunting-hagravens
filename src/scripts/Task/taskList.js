@@ -1,7 +1,5 @@
 import { getTask, useTask } from "./taskProvider.js"
-import {taskAsHTML} from "./taskHTMLconverter.js"
 
-const contentTarget = document.querySelector(".task")
 export const taskList = () => {
 getTask()
 .then(() => {
@@ -10,13 +8,9 @@ getTask()
 })
 }
 
-const render = (allTask) => {
-    let taskHTMLRepresentations = ""
-    for (const task of allTask){
-        taskHTMLRepresentations += taskAsHTML(task)
+const render = () => {
+    letTaskHTMLRepresentations = ""
+    for (const task of taskArray){
+        
     }
-    contentTarget.innerHTML = `
-    <h3>To Do List</h3>
-    ${taskHTMLRepresentations}
-    `
 }
