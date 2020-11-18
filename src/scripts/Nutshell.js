@@ -4,7 +4,6 @@ import {taskList} from "./Task/taskList.js"
 
 
 
-taskList()
 
 
 
@@ -21,10 +20,11 @@ eventHub.addEventListener("userAuthenticated", () => {
 })
 
 export const Nutshell = () => {
-  // Render all your UI components here
+    // Render all your UI components here
+    taskList()
   contentTarget.innerHTML = `
-<div class="articles-tasks">
-    <div class="articles"></div>
+  <div class="articles-tasks">
+  <div class="articles"></div>
     <div class="tasks"></div>
 </div>
 <div class="chat">
