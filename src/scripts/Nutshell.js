@@ -1,3 +1,18 @@
+//import {useTask} from "./Task/taskProvider.js"
+import {taskList} from "./Task/taskList.js"
+
+
+
+
+taskList()
+
+
+
+//useTask
+
+
+
+
 const contentTarget = document.querySelector(".dashboard");
 const eventHub = document.querySelector(".container")
 
