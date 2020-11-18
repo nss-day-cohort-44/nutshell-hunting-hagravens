@@ -43,6 +43,7 @@ const render = () => {
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "submitArticle"){
+        const userId = parseInt(sessionStorage.getItem("activeUser"))
         const title = document.querySelector("#article--Title").value
         const url = document.querySelector("#article--URL").value
         const datePosted = document.querySelector("#article--Date").value
@@ -50,6 +51,7 @@ eventHub.addEventListener("click", clickEvent => {
         
 
         const newsArticle = {
+            userId,
             title,
             url,
             datePosted,
@@ -57,16 +59,16 @@ eventHub.addEventListener("click", clickEvent => {
         }
         saveArticle(newsArticle)
     }
-    else(clickEvent.target.id === "#editArticle")
-    const title = document.querySelector("#article--Title").value
-    const url = document.querySelector("#article--URL").value
-    const datePosted = document.querySelector("#article--Date").value
-    const synopsis = document.querySelector("#article--Synopsis").value        
+    // else(clickEvent.target.id === "#editArticle")
+    // const title = document.querySelector("#article--Title").value
+    // const url = document.querySelector("#article--URL").value
+    // const datePosted = document.querySelector("#article--Date").value
+    // const synopsis = document.querySelector("#article--Synopsis").value        
 
-        const newsArticle = {
-            title,
-            url,
-            datePosted,
-            synopsis
-        }
+    //     const newsArticle = {
+    //         title,
+    //         url,
+    //         datePosted,
+    //         synopsis
+    //     }
         })
