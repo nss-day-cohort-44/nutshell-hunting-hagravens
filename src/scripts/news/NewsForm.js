@@ -9,6 +9,11 @@ import { saveArticle, useArticles } from "./NewsProvider.js"
 const articleTarget = document.querySelector(".articleForm")
 const eventHub = document.querySelector(".container")
 
+eventHub.addEventListener("newArticleButtonClicked", () => {
+    console.log("Hey man")
+            articleForm()
+        })
+
 export const articleForm = () => {
        render()
 }
@@ -24,10 +29,6 @@ const render = () => {
                 <fieldset>
                     <label>URL</label>
                     <input id="article--URL" type="text"/>
-                </fieldset>
-                <fieldset>
-                    <label>Date</label>
-                    <input id="article--Date" type="date"/>
                 </fieldset>
                 <fieldset>
                     <label>Synopsis</label>
@@ -46,7 +47,7 @@ eventHub.addEventListener("click", clickEvent => {
         const userId = parseInt(sessionStorage.getItem("activeUser"))
         const title = document.querySelector("#article--Title").value
         const url = document.querySelector("#article--URL").value
-        const datePosted = document.querySelector("#article--Date").value
+        const timestamp = Date.now()
         const synopsis = document.querySelector("#article--Synopsis").value
         
 
@@ -54,7 +55,7 @@ eventHub.addEventListener("click", clickEvent => {
             userId,
             title,
             url,
-            datePosted,
+            timestamp,
             synopsis
         }
         saveArticle(newsArticle)

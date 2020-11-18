@@ -22,7 +22,7 @@ export const useArticles = () => {
 }
 
 export const getArticles = () => {
-    return fetch("http://localhost:8088/articles") // Fetch from the API
+    return fetch("http://localhost:8088/articles?_sort=timestamp&_order=desc") // Fetch from the API
         .then(response => response.json())
         .then(articles => {
             articlesDB = articles
