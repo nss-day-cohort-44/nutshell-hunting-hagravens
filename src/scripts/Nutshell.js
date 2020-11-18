@@ -1,3 +1,4 @@
+import { renderNewEventButton } from "./events/EventButton.js";
 import { getEvents } from "./events/EventDataProvider.js";
 
 const contentTarget = document.querySelector(".dashboard");
@@ -10,4 +11,5 @@ eventHub.addEventListener("userAuthenticated", () => {
 export const Nutshell = () => {
   // Render all your UI components here
   getEvents()
+  renderNewEventButton()
 };
