@@ -1,3 +1,4 @@
+import { MessageList } from "./messages/MessageList.js";
 import { renderNewEventButton } from "./events/EventButton.js";
 import { getEvents } from "./events/EventDataProvider.js";
 import { articlesList } from "./news/NewsList.js"
@@ -12,6 +13,7 @@ eventHub.addEventListener("userAuthenticated", () => {
 
 export const Nutshell = () => {
   // Render all your UI components here
+    MessageList()
     getEvents()
     renderNewEventButton()
     articlesList()
