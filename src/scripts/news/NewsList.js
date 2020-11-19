@@ -16,15 +16,8 @@ export const articlesList = () => {
     getArticles()
         .then(() => {
             const articlesArray = useArticles()
-            const userArticles = parseInt(sessionStorage.getItem("activeUser"))
-            console.log(userArticles)
-            const filteredArticles = articlesArray.filter(article => 
-                article.userId === userArticles
-            )
-            console.log(filteredArticles)
-            render(filteredArticles)
-        }
-        )
+            render(articlesArray)
+})
 }
 
 const render = (articles) => {
@@ -44,6 +37,7 @@ eventHub.addEventListener("click", clickEvent => {
 
         /*
             Invoke the function that performs the delete operation.
+
             Once the operation is complete you should THEN invoke
             useNotes() and render the note list again.
         */
