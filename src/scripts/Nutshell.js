@@ -1,3 +1,4 @@
+import { renderNewEventButton } from "./events/EventButton.js";
 import { getEvents } from "./events/EventDataProvider.js";
 import { articlesList } from "./news/NewsList.js"
 import { newArticleButton } from "./news/NewsNewArticleButton.js";
@@ -12,6 +13,7 @@ eventHub.addEventListener("userAuthenticated", () => {
 export const Nutshell = () => {
   // Render all your UI components here
     getEvents()
+    renderNewEventButton()
     articlesList()
     newArticleButton()
 
