@@ -11,7 +11,6 @@ export const getEvents = () => {
         .then(response => response.json())
         .then(
             parsedEvents => {
-                
                 console.table(parsedEvents)
                 events = parsedEvents
             }
