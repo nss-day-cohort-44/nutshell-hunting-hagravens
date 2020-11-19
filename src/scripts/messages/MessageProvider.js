@@ -4,13 +4,14 @@
 
 
 
-
+//event listener used in sendMessage
 const eventHub = document.querySelector(".container")
 
 
 
-
+//empty array to hold messages
 let message = []
+
 
 export const getMessage = () => {
     return fetch('http://localhost:8088/messages', {

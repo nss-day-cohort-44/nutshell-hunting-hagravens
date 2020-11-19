@@ -1,3 +1,7 @@
+//AUTHOR: Shawn
+//PURPOSE OF MODULE: html representation of the messages input.
+
+
 export const MessageAsHTML = (chatObject) => {
     return `
     <div class="chat">
