@@ -7,6 +7,9 @@
 
 const eventHub = document.querySelector(".container")
 
+
+
+
 let message = []
 
 export const getMessage = () => {
