@@ -54,10 +54,25 @@ section {
     border-color: #000000;
 }
 
-.articles, .tasks, .friends, .events{
+.news__card{
+    border-style: groove;
+    padding: 12px;
+}
+
+.news__items{
+    border-style: groove;
+}
+
+.tasks, .friends, .events{
     padding: 5px;
     margin: 5px;
     border-style: groove;
     border-color: #000000;
 }
+
+fieldset {
+	display: flex;
+    flex-direction: column;
+    border: none;
 }
+
