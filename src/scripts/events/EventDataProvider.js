@@ -2,6 +2,14 @@
 
 // PURPOSE: THIS LOADS AND EXPORTS THE DATABASE STATE INTO THE APPLICATION STATE WITH A fetch() CALL.
 
+const eventHub = document.querySelector(".container")
+
+const dispatchEventChange = () => {
+    const eventStateWasChanged = new CustomEvent("eventStateChanged")
+    eventHub.dispatchEvent(eventStateWasChanged)
+}
+
+
 let events = []
 
 export const useEvents = () => events.slice()
@@ -27,7 +35,7 @@ export const addEvent = (event) => {
         },
         body: JSON.stringify(event)
     }).then(getEvents)
-    .then()
+    .then(dispatchEventChange)
 }
 
 // NOTE: reference NoteProvider in previous NSS Glassdale project

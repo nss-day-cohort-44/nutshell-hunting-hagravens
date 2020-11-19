@@ -1,25 +1,27 @@
 // AUTHOR: JARON LANE
 
 // PURPOSE: CREATE THE FORM FOR ADDING A NEW EVENT, AND DISPATCH EVENTS TO THE EVENT PROVIDER
+import { addEvent, useEvents } from "./EventDataProvider.js"
+import { renderNewEventButton } from "./EventButton.js"
 
 const eventHub = document.querySelector(".container")
 
 
 eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "add-new-event-button") {
+    if (clickEvent.target.id === "newEventButtonClicked") {
         // GRABS INPUT VALUES
         const nameOfEvent = document.querySelector("#createEventForm__eventName").value
         const dateOfEvent = document.querySelector("#createEventForm__eventDat").value
         const locationOfEvent = document.querySelector("#createEventForm__eventLocation").value
-        console.log("Add event button is listening")
         
         const newEvent = {
-            // MAKE A NEWEVENT OBJECT
+            // MAKE A NEW EVENT OBJECT
             nameOfEvent,
             dateOfEvent,
             locationOfEvent,
         }    
-
+        
+        addEvent(newEvent)
         // POST OBJECT TO DATABASE / API / JSON FILE
     }
 })
