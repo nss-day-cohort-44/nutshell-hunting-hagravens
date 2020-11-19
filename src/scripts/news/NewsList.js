@@ -1,7 +1,7 @@
 /*      
  *      Author: Ted
  *   
- *      Purpose: List news articles, export functions to modules. Needs user specific.
+ *      Purpose: List news articles, export functions to modules.
  */
 
 import { newsArticle } from "./NewsArticle.js"
@@ -16,8 +16,15 @@ export const articlesList = () => {
     getArticles()
         .then(() => {
             const articlesArray = useArticles()
-            render(articlesArray)
-})
+            const userArticles = parseInt(sessionStorage.getItem("activeUser"))
+            console.log(userArticles)
+            const filteredArticles = articlesArray.filter(article => 
+                article.userId === userArticles
+            )
+            console.log(filteredArticles)
+            render(filteredArticles)
+        }
+        )
 }
 
 const render = (articles) => {
@@ -37,7 +44,6 @@ eventHub.addEventListener("click", clickEvent => {
 
         /*
             Invoke the function that performs the delete operation.
-
             Once the operation is complete you should THEN invoke
             useNotes() and render the note list again.
         */
