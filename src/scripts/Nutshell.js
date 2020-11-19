@@ -8,14 +8,6 @@ import "./news/NewsForm.js"
 
 
 
-
-
-
-
-
-
-
-
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("userAuthenticated", () => {
@@ -23,7 +15,7 @@ eventHub.addEventListener("userAuthenticated", () => {
 })
 
 export const Nutshell = () => {
-    // Render all your UI components here
+  // Render all your UI components here
     MessageList()
     getEvents()
     renderNewEventButton()
