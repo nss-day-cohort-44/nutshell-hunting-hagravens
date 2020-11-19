@@ -2,12 +2,12 @@
 //PURPOSE OF MODULE: html representation of the messages input.
 
 
-export const MessageAsHTML = (chatObject) => {
+export const messageAsHTML = (chatObject) => {
     return `
-    <div class="chat">
-        <h5>${chatObject.message.Userid}</h5>
-        <p>Note: ${chatObject.message}</p>
-        <button id="deleteNote--${chatObject.id}">Delete</button>
+    <div class="chat__card">
+        <h5>${chatObject.user.id}</h5>
+        <p>${chatObject.message}</p>
+        
     </div>
     `
     }

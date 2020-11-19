@@ -12,12 +12,14 @@ const eventHub = document.querySelector(".container")
 //empty array to hold messages
 let message = []
 
-
+//getting messages from json
 export const getMessage = () => {
     return fetch('http://localhost:8088/messages', {
         method: "GET"
     })
+    //making it readable in json 
         .then(response => response.json())
+    //
         .then(parsedMessages => {
             message = parsedMessages
         })
@@ -27,14 +29,4 @@ export const useMessage = () => {
     return message.slice()
 }
 
-export const sendMessage = (chat) => {
-return fetch('http://localhost:8088/messages', {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(chat) 
-})
-    .then(getNotes)
-    .then(dispatchStateChangeEvent)
-}
+
