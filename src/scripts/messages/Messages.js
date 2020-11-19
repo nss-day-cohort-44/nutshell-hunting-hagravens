@@ -5,7 +5,7 @@
 export const messageAsHTML = (chatObject) => {
     return `
     <div class="chat__card">
-        <h5>${chatObject.user.id}</h5>
+        <h5>${chatObject.id}</h5>
         <p>${chatObject.message}</p>
         
     </div>

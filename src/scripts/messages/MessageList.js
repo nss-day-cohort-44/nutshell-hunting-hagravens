@@ -1,6 +1,7 @@
 //AUTHOR: Shawn
 //PURPOSE: provides functionality to populate messages on the DOM
 
+const contentTarget = document.querySelector(".chat")
 
 import { getMessage, useMessage } from "./MessageProvider.js"
 import { messageAsHTML } from "./Messages.js"
@@ -11,13 +12,17 @@ export const MessageList = () => {
            const messages = useMessage()
 
             console.log("MESSAGES FROM MESSAGE LIST", messages)
-            renderMessages()
+            renderMessages(messages)
         })
     
 }
 
-const renderMessages = () => {
-    const contentTarget = document.querySelector(".chat")
+const renderMessages = (messages) => {
+    let messageHTMLRepresentations = ""
+    messages.forEach((newMessage) => {
+        messageHTMLRepresentations += messageAsHTML(newMessage)
+    })
     contentTarget.innerHTML = `
-    HELLO`
+
+    <div>${messageHTMLRepresentations}</div>`
 }
