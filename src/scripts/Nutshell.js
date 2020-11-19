@@ -12,9 +12,18 @@ eventHub.addEventListener("userAuthenticated", () => {
 
 export const Nutshell = () => {
   // Render all your UI components here
+<<<<<<< HEAD
   getEvents()
   renderNewEventButton()
   articlesList()
   newArticleButton()
 };
     
+=======
+    getEvents()
+    renderNewEventButton()
+    articlesList()
+    newArticleButton()
+
+};
+>>>>>>> master
