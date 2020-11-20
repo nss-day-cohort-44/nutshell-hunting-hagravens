@@ -38,4 +38,3 @@ export const addEvent = (event) => {
     .then(dispatchEventChange)
 }
 
-// NOTE: reference NoteProvider in previous NSS Glassdale project

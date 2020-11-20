@@ -37,6 +37,6 @@ export const EventForm = () => {
     <input type="text" id="createEventForm__eventName" placeholder="Event Name"/>
     <input type="date" id="createEventForm__eventDate"/>
     <input type="text" id="createEventForm__eventLocation" placeholder="Event Location"/>
-    <button id="createEventForm__addEventButton">Add New Event</button>
+    <button id="createEventForm__addEventButton">Add Event</button>
     `
 }
