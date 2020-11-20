@@ -5,7 +5,7 @@ import { getEvents } from "./events/EventDataProvider.js";
 import { articlesList } from "./news/NewsList.js"
 import { newArticleButton } from "./news/NewsNewArticleButton.js";
 import "./news/NewsForm.js"
-
+import {renderAddTaskButton} from "./Task/taskForm.js"
 
 
 const eventHub = document.querySelector(".container")
@@ -22,5 +22,5 @@ export const Nutshell = () => {
     articlesList()
     newArticleButton()
     taskList()
-    
+    renderAddTaskButton()
 };
