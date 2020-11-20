@@ -75,4 +75,10 @@ fieldset {
     flex-direction: column;
     border: none;
 }
+.task{
+    padding: 5px;
+    margin: 5px;
+    border-style: groove;
+    border-color: #000000;
+}
 
