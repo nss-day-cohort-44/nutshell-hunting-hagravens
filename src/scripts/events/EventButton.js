@@ -8,7 +8,7 @@ const eventHub = document.querySelector(".container")
 export const renderNewEventButton = () => {
     // DISPLAYS STATIC BUTTON TO DOM
     eventContentTarget.innerHTML = `
-    <button id="add-new-event-button">Add New Event</button>
+    <button id="add-new-event-button">New Event</button>
     `
 } 
 

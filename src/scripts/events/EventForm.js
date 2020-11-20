@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "createEventForm__addEventButton") {
         // GRABS INPUT VALUES
         const nameOfEvent = document.querySelector("#createEventForm__eventName").value
-        const dateOfEvent = document.querySelector("#createEventForm__eventDat").value
+        const dateOfEvent = document.querySelector("#createEventForm__eventDate").value
         const locationOfEvent = document.querySelector("#createEventForm__eventLocation").value
         
         const newEvent = {
